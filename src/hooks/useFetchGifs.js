@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { getGifs } from '../helpers/getGifs'
 
 export const useFetchGifs = ( category ) => {
@@ -7,7 +7,7 @@ export const useFetchGifs = ( category ) => {
         loading: true
     })
 
-    useEffect( async() => {
+    useEffect( () => {
 
         getGifs( category )
             .then( imgs => {
